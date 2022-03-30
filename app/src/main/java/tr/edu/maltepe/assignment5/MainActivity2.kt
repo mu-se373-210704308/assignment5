@@ -18,13 +18,11 @@ class MainActivity2 : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
-
-
+    }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
         return super.onCreateOptionsMenu(menu)
     }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.about -> Toast.makeText(this, "About Selected", Toast.LENGTH_SHORT).show()
@@ -33,6 +31,8 @@ class MainActivity2 : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-}
+    fun msgShow(msg: String){
+        Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
+    }
 }
 
